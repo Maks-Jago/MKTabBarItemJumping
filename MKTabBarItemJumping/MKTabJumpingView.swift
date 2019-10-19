@@ -9,94 +9,61 @@
 import SwiftUI
 
 struct MKTabJumpingView: View {
-    @State var selectedItem: Int = 0
-    @State var value: Bool = false
+    private var items: [TabItem] = [.init(iconName: "heart"),
+                                    .init(iconName: "pin.circle"),
+                                    .init(iconName: "clock"),
+                                    .init(iconName: "bell"),
+                                    .init(iconName: "person")]
+
+    @State var selectedItemIndex: Int = 0
+    @State var jumping: Bool = false
 
     var body: some View {
-        let itemWidthCalculator = { (width: CGFloat) -> CGFloat in
-            width / 4.0
-        }
-
-        return GeometryReader { proxy in
+        GeometryReader { proxy in
             VStack {
-                Spacer()
+                Color.gray.edgesIgnoringSafeArea(.all)
                 ZStack(alignment: .leading) {
-                    HStack(spacing: 0) {
-                        Rectangle()
-                            .foregroundColor(.red)
-                            .onTapGesture {
-                                self.selectedItem = 0
-                                self.value.toggle()
-                        }
-                        Rectangle()
-                            .foregroundColor(.green)
-                            .onTapGesture {
-                                self.selectedItem = 1
-                                self.value.toggle()
-                        }
-                        Rectangle()
-                            .foregroundColor(.blue)
-                            .onTapGesture {
-                                self.selectedItem = 2
-                                self.value.toggle()
-                        }
-                        Rectangle()
-                            .foregroundColor(.orange)
-                            .onTapGesture {
-                                self.selectedItem = 3
-                                self.value.toggle()
-                        }
-                    }.frame(height: 90)
-
                     Circle()
                         .frame(width: 60, height: 60)
                         .foregroundColor(Color.clear)
-                        .background(LinearGradient(gradient:
-                            Gradient(colors: [.red, .blue]),
-                                                   startPoint: .bottom,
-                                                   endPoint: .top))
+                        .background(
+                            LinearGradient(gradient: Gradient(colors: [.darkGreen, .lightGreen]),
+                                           startPoint: .bottomLeading, endPoint: .topTrailing)
+                        )
                         .clipShape(Circle())
-                        .shadow(radius: 20)
-                    .modifier(MyEffect(offset: CGSize(width: itemWidthCalculator(proxy.size.width) / 2 - 30 + CGFloat(self.selectedItem) * itemWidthCalculator(proxy.size.width),
-                                                      height: self.value ? 1 : 0)))
-//                        .modifier(MyEffect(x: itemWidthCalculator(proxy.size.width) / 2 - 30 + CGFloat(self.selectedItem) * itemWidthCalculator(proxy.size.width), y: 50))
-//                        .modifier(MyEffect(x: itemWidthCalculator(proxy.size.width) / 2 - 30 + CGFloat(self.selectedItem) * itemWidthCalculator(proxy.size.width),
-//                                           fromX: itemWidthCalculator(proxy.size.width) / 2 - 30 + CGFloat(self.selectedItem - 1) * itemWidthCalculator(proxy.size.width)))
+                        .shadow(radius: 1)
+                        .offset(y: -20)
+                        .modifier(JumpingEffect(itemWidth: proxy.size.width / CGFloat(self.items.count),
+                                                selectedItemIndex: self.selectedItemIndex,
+                                                jumping: self.jumping))
                         .animation(.linear)
+
+                    HStack(spacing: 0) {
+                        ForEach(0..<self.items.count) { index in
+                            TabItemView(item: self.items[index],
+                                        isSelected: index == self.selectedItemIndex,
+                                        onItemSelected: self.onItemSelected)
+                        }
+                    }
+                    .frame(height: 90)
                 }
             }
         }
-        .edgesIgnoringSafeArea(.bottom)
+    }
+
+    func onItemSelected(item: TabItem) {
+        selectedItemIndex = items.firstIndex(of: item) ?? 0
+        jumping.toggle()
     }
 }
 
+struct JumpingEffect: GeometryEffect {
+    private var offset: CGSize
 
-//struct MyEffect: GeometryEffect {
-//    var x: CGFloat
-//    private var result: CGFloat
-//    private var initialValue: CGFloat
-//
-//    init(x: CGFloat, fromX: CGFloat) {
-//        self.x = x
-//        result = x
-//        initialValue = max(fromX, 0)
-//    }
-//
-//    var animatableData: CGFloat {
-//        get { x }
-//        set { x = newValue }
-//    }
-//
-//    func effectValue(size: CGSize) -> ProjectionTransform {
-//        let value = min(x - 30, result - 30) / max(x - 30, result - 30)
-//        let y = -50 * sin(value * .pi)
-//        print(y)
-//        return ProjectionTransform(CGAffineTransform(translationX: x, y: y))
-//    }
-//}
-
-struct MyEffect: GeometryEffect {
-    var offset: CGSize
+    init(itemWidth: CGFloat, selectedItemIndex: Int, jumping: Bool) {
+        offset = CGSize(width: itemWidth / 2 - 30 + CGFloat(selectedItemIndex) * itemWidth,
+                        height: jumping ? 1 : 0)
+    }
 
     var animatableData: CGSize.AnimatableData {
         get { CGSize.AnimatableData(offset.width, offset.height) }
