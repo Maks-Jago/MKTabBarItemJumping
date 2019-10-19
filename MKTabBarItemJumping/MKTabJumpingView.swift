@@ -23,20 +23,9 @@ struct MKTabJumpingView: View {
             VStack {
                 Color.gray.edgesIgnoringSafeArea(.all)
                 ZStack(alignment: .leading) {
-                    Circle()
-                        .frame(width: 60, height: 60)
-                        .foregroundColor(Color.clear)
-                        .background(
-                            LinearGradient(gradient: Gradient(colors: [.darkGreen, .lightGreen]),
-                                           startPoint: .bottomLeading, endPoint: .topTrailing)
-                        )
-                        .clipShape(Circle())
-                        .shadow(radius: 1)
-                        .offset(y: -20)
-                        .modifier(JumpingEffect(itemWidth: proxy.size.width / CGFloat(self.items.count),
-                                                selectedItemIndex: self.selectedItemIndex,
-                                                jumping: self.jumping))
-                        .animation(.linear)
+                    TabItemSelectionView(itemWidth: proxy.size.width / CGFloat(self.items.count),
+                                         selectedItemIndex: self.selectedItemIndex,
+                                         jumping: self.jumping)
 
                     HStack(spacing: 0) {
                         ForEach(0..<self.items.count) { index in
@@ -56,26 +45,6 @@ struct MKTabJumpingView: View {
         jumping.toggle()
     }
 }
-
-struct JumpingEffect: GeometryEffect {
-    private var offset: CGSize
-
-    init(itemWidth: CGFloat, selectedItemIndex: Int, jumping: Bool) {
-        offset = CGSize(width: itemWidth / 2 - 30 + CGFloat(selectedItemIndex) * itemWidth,
-                        height: jumping ? 1 : 0)
-    }
-
-    var animatableData: CGSize.AnimatableData {
-        get { CGSize.AnimatableData(offset.width, offset.height) }
-        set { offset = CGSize(width: newValue.first, height: newValue.second) }
-    }
-
-    func effectValue(size: CGSize) -> ProjectionTransform {
-        let y = -1 * abs(80 * sin(offset.height * .pi))
-        return ProjectionTransform(CGAffineTransform(translationX: offset.width, y: y))
-    }
-}
-
 
 struct MKTabJumpingView_Previews: PreviewProvider {
     static var previews: some View {
