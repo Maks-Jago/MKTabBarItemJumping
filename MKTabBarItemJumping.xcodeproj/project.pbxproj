@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01152B60234131CF00133BED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01152B5F234131CF00133BED /* AppDelegate.swift */; };
+		01152B62234131CF00133BED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01152B61234131CF00133BED /* SceneDelegate.swift */; };
+		01152B64234131CF00133BED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01152B63234131CF00133BED /* ContentView.swift */; };
+		01152B66234131D400133BED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01152B65234131D400133BED /* Assets.xcassets */; };
+		01152B69234131D400133BED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01152B68234131D400133BED /* Preview Assets.xcassets */; };
+		01152B6C234131D400133BED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01152B6A234131D400133BED /* LaunchScreen.storyboard */; };
+		01152B77234131D400133BED /* MKTabBarItemJumpingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01152B76234131D400133BED /* MKTabBarItemJumpingTests.swift */; };
+		01152B82234131D400133BED /* MKTabBarItemJumpingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01152B81234131D400133BED /* MKTabBarItemJumpingUITests.swift */; };
+		01152B902341382300133BED /* MKTabJumpingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01152B8F2341382300133BED /* MKTabJumpingView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01152B73234131D400133BED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01152B54234131CF00133BED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01152B5B234131CF00133BED;
+			remoteInfo = MKTabBarItemJumping;
+		};
+		01152B7E234131D400133BED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01152B54234131CF00133BED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01152B5B234131CF00133BED;
+			remoteInfo = MKTabBarItemJumping;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01152B5C234131CF00133BED /* MKTabBarItemJumping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKTabBarItemJumping.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01152B5F234131CF00133BED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01152B61234131CF00133BED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		01152B63234131CF00133BED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		01152B65234131D400133BED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01152B68234131D400133BED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		01152B6B234131D400133BED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		01152B6D234131D400133BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01152B72234131D400133BED /* MKTabBarItemJumpingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKTabBarItemJumpingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01152B76234131D400133BED /* MKTabBarItemJumpingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKTabBarItemJumpingTests.swift; sourceTree = "<group>"; };
+		01152B78234131D400133BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01152B7D234131D400133BED /* MKTabBarItemJumpingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKTabBarItemJumpingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01152B81234131D400133BED /* MKTabBarItemJumpingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKTabBarItemJumpingUITests.swift; sourceTree = "<group>"; };
+		01152B83234131D400133BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01152B8F2341382300133BED /* MKTabJumpingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKTabJumpingView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01152B59234131CF00133BED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01152B6F234131D400133BED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01152B7A234131D400133BED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01152B53234131CF00133BED = {
+			isa = PBXGroup;
+			children = (
+				01152B5E234131CF00133BED /* MKTabBarItemJumping */,
+				01152B75234131D400133BED /* MKTabBarItemJumpingTests */,
+				01152B80234131D400133BED /* MKTabBarItemJumpingUITests */,
+				01152B5D234131CF00133BED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01152B5D234131CF00133BED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01152B5C234131CF00133BED /* MKTabBarItemJumping.app */,
+				01152B72234131D400133BED /* MKTabBarItemJumpingTests.xctest */,
+				01152B7D234131D400133BED /* MKTabBarItemJumpingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01152B5E234131CF00133BED /* MKTabBarItemJumping */ = {
+			isa = PBXGroup;
+			children = (
+				01152B5F234131CF00133BED /* AppDelegate.swift */,
+				01152B61234131CF00133BED /* SceneDelegate.swift */,
+				01152B63234131CF00133BED /* ContentView.swift */,
+				01152B65234131D400133BED /* Assets.xcassets */,
+				01152B6A234131D400133BED /* LaunchScreen.storyboard */,
+				01152B6D234131D400133BED /* Info.plist */,
+				01152B67234131D400133BED /* Preview Content */,
+				01152B8F2341382300133BED /* MKTabJumpingView.swift */,
+			);
+			path = MKTabBarItemJumping;
+			sourceTree = "<group>";
+		};
+		01152B67234131D400133BED /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				01152B68234131D400133BED /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		01152B75234131D400133BED /* MKTabBarItemJumpingTests */ = {
+			isa = PBXGroup;
+			children = (
+				01152B76234131D400133BED /* MKTabBarItemJumpingTests.swift */,
+				01152B78234131D400133BED /* Info.plist */,
+			);
+			path = MKTabBarItemJumpingTests;
+			sourceTree = "<group>";
+		};
+		01152B80234131D400133BED /* MKTabBarItemJumpingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				01152B81234131D400133BED /* MKTabBarItemJumpingUITests.swift */,
+				01152B83234131D400133BED /* Info.plist */,
+			);
+			path = MKTabBarItemJumpingUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01152B5B234131CF00133BED /* MKTabBarItemJumping */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01152B86234131D400133BED /* Build configuration list for PBXNativeTarget "MKTabBarItemJumping" */;
+			buildPhases = (
+				01152B58234131CF00133BED /* Sources */,
+				01152B59234131CF00133BED /* Frameworks */,
+				01152B5A234131CF00133BED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MKTabBarItemJumping;
+			productName = MKTabBarItemJumping;
+			productReference = 01152B5C234131CF00133BED /* MKTabBarItemJumping.app */;
+			productType = "com.apple.product-type.application";
+		};
+		01152B71234131D400133BED /* MKTabBarItemJumpingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01152B89234131D400133BED /* Build configuration list for PBXNativeTarget "MKTabBarItemJumpingTests" */;
+			buildPhases = (
+				01152B6E234131D400133BED /* Sources */,
+				01152B6F234131D400133BED /* Frameworks */,
+				01152B70234131D400133BED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01152B74234131D400133BED /* PBXTargetDependency */,
+			);
+			name = MKTabBarItemJumpingTests;
+			productName = MKTabBarItemJumpingTests;
+			productReference = 01152B72234131D400133BED /* MKTabBarItemJumpingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		01152B7C234131D400133BED /* MKTabBarItemJumpingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01152B8C234131D400133BED /* Build configuration list for PBXNativeTarget "MKTabBarItemJumpingUITests" */;
+			buildPhases = (
+				01152B79234131D400133BED /* Sources */,
+				01152B7A234131D400133BED /* Frameworks */,
+				01152B7B234131D400133BED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01152B7F234131D400133BED /* PBXTargetDependency */,
+			);
+			name = MKTabBarItemJumpingUITests;
+			productName = MKTabBarItemJumpingUITests;
+			productReference = 01152B7D234131D400133BED /* MKTabBarItemJumpingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01152B54234131CF00133BED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Max Kuznetsov";
+				TargetAttributes = {
+					01152B5B234131CF00133BED = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					01152B71234131D400133BED = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 01152B5B234131CF00133BED;
+					};
+					01152B7C234131D400133BED = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 01152B5B234131CF00133BED;
+					};
+				};
+			};
+			buildConfigurationList = 01152B57234131CF00133BED /* Build configuration list for PBXProject "MKTabBarItemJumping" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01152B53234131CF00133BED;
+			productRefGroup = 01152B5D234131CF00133BED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01152B5B234131CF00133BED /* MKTabBarItemJumping */,
+				01152B71234131D400133BED /* MKTabBarItemJumpingTests */,
+				01152B7C234131D400133BED /* MKTabBarItemJumpingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01152B5A234131CF00133BED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01152B6C234131D400133BED /* LaunchScreen.storyboard in Resources */,
+				01152B69234131D400133BED /* Preview Assets.xcassets in Resources */,
+				01152B66234131D400133BED /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01152B70234131D400133BED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01152B7B234131D400133BED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01152B58234131CF00133BED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01152B60234131CF00133BED /* AppDelegate.swift in Sources */,
+				01152B902341382300133BED /* MKTabJumpingView.swift in Sources */,
+				01152B62234131CF00133BED /* SceneDelegate.swift in Sources */,
+				01152B64234131CF00133BED /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01152B6E234131D400133BED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01152B77234131D400133BED /* MKTabBarItemJumpingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01152B79234131D400133BED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01152B82234131D400133BED /* MKTabBarItemJumpingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01152B74234131D400133BED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01152B5B234131CF00133BED /* MKTabBarItemJumping */;
+			targetProxy = 01152B73234131D400133BED /* PBXContainerItemProxy */;
+		};
+		01152B7F234131D400133BED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01152B5B234131CF00133BED /* MKTabBarItemJumping */;
+			targetProxy = 01152B7E234131D400133BED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		01152B6A234131D400133BED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01152B6B234131D400133BED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01152B84234131D400133BED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		01152B85234131D400133BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01152B87234131D400133BED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MKTabBarItemJumping/Preview Content\"";
+				DEVELOPMENT_TEAM = XK5AEQZHJU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MKTabBarItemJumping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "max-kuznetsov.MKTabBarItemJumping";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01152B88234131D400133BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MKTabBarItemJumping/Preview Content\"";
+				DEVELOPMENT_TEAM = XK5AEQZHJU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MKTabBarItemJumping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "max-kuznetsov.MKTabBarItemJumping";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		01152B8A234131D400133BED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XK5AEQZHJU;
+				INFOPLIST_FILE = MKTabBarItemJumpingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "max-kuznetsov.MKTabBarItemJumpingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MKTabBarItemJumping.app/MKTabBarItemJumping";
+			};
+			name = Debug;
+		};
+		01152B8B234131D400133BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XK5AEQZHJU;
+				INFOPLIST_FILE = MKTabBarItemJumpingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "max-kuznetsov.MKTabBarItemJumpingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MKTabBarItemJumping.app/MKTabBarItemJumping";
+			};
+			name = Release;
+		};
+		01152B8D234131D400133BED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XK5AEQZHJU;
+				INFOPLIST_FILE = MKTabBarItemJumpingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "max-kuznetsov.MKTabBarItemJumpingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MKTabBarItemJumping;
+			};
+			name = Debug;
+		};
+		01152B8E234131D400133BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XK5AEQZHJU;
+				INFOPLIST_FILE = MKTabBarItemJumpingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "max-kuznetsov.MKTabBarItemJumpingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MKTabBarItemJumping;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01152B57234131CF00133BED /* Build configuration list for PBXProject "MKTabBarItemJumping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01152B84234131D400133BED /* Debug */,
+				01152B85234131D400133BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01152B86234131D400133BED /* Build configuration list for PBXNativeTarget "MKTabBarItemJumping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01152B87234131D400133BED /* Debug */,
+				01152B88234131D400133BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01152B89234131D400133BED /* Build configuration list for PBXNativeTarget "MKTabBarItemJumpingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01152B8A234131D400133BED /* Debug */,
+				01152B8B234131D400133BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01152B8C234131D400133BED /* Build configuration list for PBXNativeTarget "MKTabBarItemJumpingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01152B8D234131D400133BED /* Debug */,
+				01152B8E234131D400133BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01152B54234131CF00133BED /* Project object */;
+}
