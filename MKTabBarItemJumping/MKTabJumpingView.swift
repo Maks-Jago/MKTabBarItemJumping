@@ -27,6 +27,7 @@ struct MKTabJumpingView: View {
                                          selectedItemIndex: self.selectedItemIndex,
                                          jumping: self.jumping)
 
+
                     HStack(spacing: 0) {
                         ForEach(0..<self.items.count) { index in
                             TabItemView(item: self.items[index],
@@ -34,6 +35,7 @@ struct MKTabJumpingView: View {
                                         onItemSelected: self.onItemSelected)
                         }
                     }
+                    .padding(.top, -10)
                     .frame(height: 90)
                 }
             }

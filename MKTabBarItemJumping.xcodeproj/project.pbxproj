@@ -15,6 +15,7 @@
 		01152B77234131D400133BED /* MKTabBarItemJumpingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01152B76234131D400133BED /* MKTabBarItemJumpingTests.swift */; };
 		01152B82234131D400133BED /* MKTabBarItemJumpingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01152B81234131D400133BED /* MKTabBarItemJumpingUITests.swift */; };
 		01152B902341382300133BED /* MKTabJumpingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01152B8F2341382300133BED /* MKTabJumpingView.swift */; };
+		5017671C235E32E800ED55AE /* TabItemShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5017671B235E32E800ED55AE /* TabItemShape.swift */; };
 		5073B084235B5AE70065A832 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5073B083235B5AE70065A832 /* Color.swift */; };
 		5073B087235B5B890065A832 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5073B086235B5B890065A832 /* TabItemView.swift */; };
 		5073B089235B6BE00065A832 /* TabItemSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5073B088235B6BE00065A832 /* TabItemSelectionView.swift */; };
@@ -52,6 +53,7 @@
 		01152B81234131D400133BED /* MKTabBarItemJumpingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKTabBarItemJumpingUITests.swift; sourceTree = "<group>"; };
 		01152B83234131D400133BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01152B8F2341382300133BED /* MKTabJumpingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKTabJumpingView.swift; sourceTree = "<group>"; };
+		5017671B235E32E800ED55AE /* TabItemShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemShape.swift; sourceTree = "<group>"; };
 		5073B083235B5AE70065A832 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		5073B086235B5B890065A832 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		5073B088235B6BE00065A832 /* TabItemSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemSelectionView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		01152B5E234131CF00133BED /* MKTabBarItemJumping */ = {
 			isa = PBXGroup;
 			children = (
+				5017671A235E32CE00ED55AE /* Shapes */,
 				5073B085235B5B760065A832 /* Views */,
 				5073B082235B5AD70065A832 /* Extensions */,
 				01152B6D234131D400133BED /* Info.plist */,
@@ -142,6 +145,14 @@
 				01152B83234131D400133BED /* Info.plist */,
 			);
 			path = MKTabBarItemJumpingUITests;
+			sourceTree = "<group>";
+		};
+		5017671A235E32CE00ED55AE /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				5017671B235E32E800ED55AE /* TabItemShape.swift */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 		5073B082235B5AD70065A832 /* Extensions */ = {
@@ -298,6 +309,7 @@
 				01152B902341382300133BED /* MKTabJumpingView.swift in Sources */,
 				5073B087235B5B890065A832 /* TabItemView.swift in Sources */,
 				01152B62234131CF00133BED /* SceneDelegate.swift in Sources */,
+				5017671C235E32E800ED55AE /* TabItemShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

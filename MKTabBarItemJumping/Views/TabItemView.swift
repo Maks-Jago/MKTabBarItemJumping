@@ -19,15 +19,18 @@ struct TabItemView: View {
 
     var body: some View {
         ZStack {
-            Color.clear
-            Image(systemName: item.iconName)
+            Color.gray
+                .clipShape(TabItemShape(isSelected: isSelected))
+                .edgesIgnoringSafeArea(.all)
+                .animation(.spring())
+            
+            Image(systemName: self.item.iconName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 25, height: 25)
                 .background(Color.clear)
-                .offset(y: isSelected ? -20 : 0)
+                .offset(y: self.isSelected ? -20 : 0)
                 .animation(Animation.easeOut)
-//                .foregroundColor(isSelected ? Color.white : Color.black)
         }
         .onTapGesture {
             self.onItemSelected(self.item)
@@ -37,7 +40,7 @@ struct TabItemView: View {
 
 struct TabItemView_Previews: PreviewProvider {
     static var previews: some View {
-        TabItemView(item: TabItem(iconName: "heart"), isSelected: false) { (selectedIndex) in
+        TabItemView(item: TabItem(iconName: "heart"), isSelected: true) { (selectedIndex) in
 
         }
     }
