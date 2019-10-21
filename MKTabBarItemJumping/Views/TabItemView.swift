@@ -19,11 +19,7 @@ struct TabItemView: View {
 
     var body: some View {
         ZStack {
-            Color.gray
-                .clipShape(TabItemShape(isSelected: isSelected))
-                .edgesIgnoringSafeArea(.all)
-                .animation(.spring())
-            
+            Color.clear
             Image(systemName: self.item.iconName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)

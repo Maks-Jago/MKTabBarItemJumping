@@ -23,6 +23,17 @@ struct MKTabJumpingView: View {
             VStack {
                 Color.gray.edgesIgnoringSafeArea(.all)
                 ZStack(alignment: .leading) {
+                    HStack(spacing: 0) {
+                        ForEach(0..<self.items.count) { index in
+                            Color.gray
+                                .clipShape(TabItemShape(isSelected: index == self.selectedItemIndex))
+                                .edgesIgnoringSafeArea(.all)
+                                .animation(.spring())
+                        }
+                    }
+                    .padding(.top, -10)
+                    .frame(height: 100)
+
                     TabItemSelectionView(itemWidth: proxy.size.width / CGFloat(self.items.count),
                                          selectedItemIndex: self.selectedItemIndex,
                                          jumping: self.jumping)
@@ -35,7 +46,6 @@ struct MKTabJumpingView: View {
                                         onItemSelected: self.onItemSelected)
                         }
                     }
-                    .padding(.top, -10)
                     .frame(height: 90)
                 }
             }
