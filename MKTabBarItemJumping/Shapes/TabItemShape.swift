@@ -63,8 +63,6 @@ struct TabItemShape: Shape {
         shapePath.addLine(to: CGPoint(x: rect.width, y: 0))
         shapePath.addLine(to: .zero)
 
-
-
         return Path(shapePath.cgPath)
     }
 }

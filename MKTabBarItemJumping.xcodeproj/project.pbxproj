@@ -21,6 +21,7 @@
 		5073B089235B6BE00065A832 /* TabItemSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5073B088235B6BE00065A832 /* TabItemSelectionView.swift */; };
 		50FC138123662C8700B87F8F /* MKTabJumpingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC138023662C8700B87F8F /* MKTabJumpingView.swift */; };
 		50FC138623662D9500B87F8F /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC138523662D9500B87F8F /* LogoView.swift */; };
+		50FC138823662FF900B87F8F /* ElasticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC138723662FF900B87F8F /* ElasticView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		5073B088235B6BE00065A832 /* TabItemSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemSelectionView.swift; sourceTree = "<group>"; };
 		50FC138023662C8700B87F8F /* MKTabJumpingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKTabJumpingView.swift; sourceTree = "<group>"; };
 		50FC138523662D9500B87F8F /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		50FC138723662FF900B87F8F /* ElasticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElasticView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				5073B086235B5B890065A832 /* TabItemView.swift */,
 				5073B088235B6BE00065A832 /* TabItemSelectionView.swift */,
 				50FC138523662D9500B87F8F /* LogoView.swift */,
+				50FC138723662FF900B87F8F /* ElasticView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			files = (
 				01152B60234131CF00133BED /* AppDelegate.swift in Sources */,
 				50FC138623662D9500B87F8F /* LogoView.swift in Sources */,
+				50FC138823662FF900B87F8F /* ElasticView.swift in Sources */,
 				5073B084235B5AE70065A832 /* Color.swift in Sources */,
 				5073B089235B6BE00065A832 /* TabItemSelectionView.swift in Sources */,
 				5073B087235B5B890065A832 /* TabItemView.swift in Sources */,

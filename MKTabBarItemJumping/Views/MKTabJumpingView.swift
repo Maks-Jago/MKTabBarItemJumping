@@ -19,7 +19,7 @@ struct MKTabJumpingView: View {
     @State var firstSelectedItemIndex: Int = 0
     @State var secondSelectedItemIndex: Int = 0
 
-    @State var jumping: Bool = false
+    @State var firstSelected: Bool = false
     @State var secondSelected: Bool = true
 
     private var springAnimation: Animation {
@@ -37,25 +37,17 @@ struct MKTabJumpingView: View {
                         .offset(y: -50)
                 }
                 ZStack(alignment: .leading) {
-                    Color.purple
-                        .clipShape(TabItemShape(itemWidth: proxy.size.width / CGFloat(self.items.count),
-                                                selectedItemIndex: self.firstSelectedItemIndex,
-                                                isSelected: self.jumping))
-                        .edgesIgnoringSafeArea(.all)
-                        .frame(height: 100)
-                        .animation(self.jumping ? self.springAnimation : .interactiveSpring())
+                    ElasticView(itemWidth: proxy.size.width / CGFloat(self.items.count),
+                                selectedItemIndex: self.firstSelectedItemIndex,
+                                isSelected: self.firstSelected)
 
-                    Color.purple
-                        .clipShape(TabItemShape(itemWidth: proxy.size.width / CGFloat(self.items.count),
-                                                selectedItemIndex: self.secondSelectedItemIndex,
-                                                isSelected: self.secondSelected))
-                        .edgesIgnoringSafeArea(.all)
-                        .frame(height: 100)
-                    .animation(self.secondSelected ? self.springAnimation : .interactiveSpring())
+                    ElasticView(itemWidth: proxy.size.width / CGFloat(self.items.count),
+                                selectedItemIndex: self.secondSelectedItemIndex,
+                                isSelected: self.secondSelected)
 
                     TabItemSelectionView(itemWidth: proxy.size.width / CGFloat(self.items.count),
                                          selectedItemIndex: self.selectedItemIndex,
-                                         jumping: self.jumping)
+                                         jumping: self.firstSelected)
 
                     HStack(spacing: 0) {
                         ForEach(0..<self.items.count) { index in
@@ -74,13 +66,13 @@ struct MKTabJumpingView: View {
     func onItemSelected(item: TabItem) {
         selectedItemIndex = items.firstIndex(of: item) ?? 0
 
-        if jumping {
+        if firstSelected {
             secondSelectedItemIndex = selectedItemIndex
         } else {
             firstSelectedItemIndex = selectedItemIndex
         }
 
-        jumping.toggle()
+        firstSelected.toggle()
         secondSelected.toggle()
     }
 }
