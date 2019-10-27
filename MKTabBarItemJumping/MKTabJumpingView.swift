@@ -22,7 +22,7 @@ struct MKTabJumpingView: View {
     @State var jumping: Bool = false
     @State var secondSelected: Bool = true
 
-    var springAnimation: Animation {
+    private var springAnimation: Animation {
         Animation
             .spring(dampingFraction: 0.6)
             .delay(0.15)
@@ -39,7 +39,7 @@ struct MKTabJumpingView: View {
                                                 isSelected: self.jumping))
                         .edgesIgnoringSafeArea(.all)
                         .frame(height: 100)
-                        .animation(self.springAnimation)
+                        .animation(self.jumping ? self.springAnimation : .interactiveSpring())
 
                     Color.purple
                         .clipShape(TabItemShape(itemWidth: proxy.size.width / CGFloat(self.items.count),
@@ -47,7 +47,7 @@ struct MKTabJumpingView: View {
                                                 isSelected: self.secondSelected))
                         .edgesIgnoringSafeArea(.all)
                         .frame(height: 100)
-                        .animation(self.springAnimation)
+                    .animation(self.secondSelected ? self.springAnimation : .interactiveSpring())
 
                     TabItemSelectionView(itemWidth: proxy.size.width / CGFloat(self.items.count),
                                          selectedItemIndex: self.selectedItemIndex,
