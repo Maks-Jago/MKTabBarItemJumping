@@ -35,18 +35,17 @@ struct TabItemShape: Shape {
         let offsetX = (itemWidth / 2 - 38 + CGFloat(selectedItemIndex) * itemWidth)
         let offsetY = abs(20 * sin(value * .pi / 2))
 
-        let linePath = UIBezierPath()
-
         let points = [
-            CGPoint(x: offsetX - offsetXDelta, y: 0),
+            CGPoint(x: offsetX - offsetXDelta, y: 0.1),
             CGPoint(x: offsetX - 10, y: offsetY),
             CGPoint(x: offsetX + 15, y: y),
             CGPoint(x: offsetX + itemWidth - 15, y: y),
             CGPoint(x: offsetX + itemWidth + 10, y: offsetY),
-            CGPoint(x: offsetX + itemWidth + offsetXDelta, y: 0)
+            CGPoint(x: offsetX + itemWidth + offsetXDelta, y: 0.1)
         ]
 
         let controlPoints = CubicCurveAlgorithm().controlPointsFromPoints(dataPoints: points)
+        let linePath = UIBezierPath()
 
         for i in 0..<points.count {
             let point = points[i];
@@ -59,7 +58,13 @@ struct TabItemShape: Shape {
             }
         }
 
-        return Path(linePath.cgPath)
+        let shapePath = UIBezierPath()
+        shapePath.append(linePath)
+        shapePath.addLine(to: CGPoint(x: rect.width, y: 0))
+        shapePath.addLine(to: .zero)
+
+
+        return Path(shapePath.cgPath)
     }
 }
 
