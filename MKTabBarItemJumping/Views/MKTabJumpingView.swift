@@ -33,10 +33,7 @@ struct MKTabJumpingView: View {
             VStack(spacing: 0) {
                 ZStack(alignment: .center) {
                     Color.purple.edgesIgnoringSafeArea(.all)
-                    Image("molfar_logo")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 50)
+                    LogoView()
                         .offset(y: -50)
                 }
                 ZStack(alignment: .leading) {

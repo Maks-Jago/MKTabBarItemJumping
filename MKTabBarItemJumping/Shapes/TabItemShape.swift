@@ -29,7 +29,7 @@ struct TabItemShape: Shape {
     }
 
     func path(in rect: CGRect) -> Path {
-        let y = abs(rect.height * 0.48 * value)
+        let y = abs(rect.height * 0.47 * value)
         let offsetXDelta: CGFloat = 34
 
         let offsetX = (itemWidth / 2 - 38 + CGFloat(selectedItemIndex) * itemWidth)
@@ -62,6 +62,7 @@ struct TabItemShape: Shape {
         shapePath.append(linePath)
         shapePath.addLine(to: CGPoint(x: rect.width, y: 0))
         shapePath.addLine(to: .zero)
+
 
 
         return Path(shapePath.cgPath)

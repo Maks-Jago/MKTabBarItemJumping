@@ -14,12 +14,13 @@
 		01152B6C234131D400133BED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01152B6A234131D400133BED /* LaunchScreen.storyboard */; };
 		01152B77234131D400133BED /* MKTabBarItemJumpingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01152B76234131D400133BED /* MKTabBarItemJumpingTests.swift */; };
 		01152B82234131D400133BED /* MKTabBarItemJumpingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01152B81234131D400133BED /* MKTabBarItemJumpingUITests.swift */; };
-		01152B902341382300133BED /* MKTabJumpingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01152B8F2341382300133BED /* MKTabJumpingView.swift */; };
 		500A9D8C236243460069443E /* CubicCurveAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A9D8B236243460069443E /* CubicCurveAlgorithm.swift */; };
 		5017671C235E32E800ED55AE /* TabItemShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5017671B235E32E800ED55AE /* TabItemShape.swift */; };
 		5073B084235B5AE70065A832 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5073B083235B5AE70065A832 /* Color.swift */; };
 		5073B087235B5B890065A832 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5073B086235B5B890065A832 /* TabItemView.swift */; };
 		5073B089235B6BE00065A832 /* TabItemSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5073B088235B6BE00065A832 /* TabItemSelectionView.swift */; };
+		50FC138123662C8700B87F8F /* MKTabJumpingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC138023662C8700B87F8F /* MKTabJumpingView.swift */; };
+		50FC138623662D9500B87F8F /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC138523662D9500B87F8F /* LogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +54,13 @@
 		01152B7D234131D400133BED /* MKTabBarItemJumpingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKTabBarItemJumpingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01152B81234131D400133BED /* MKTabBarItemJumpingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKTabBarItemJumpingUITests.swift; sourceTree = "<group>"; };
 		01152B83234131D400133BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01152B8F2341382300133BED /* MKTabJumpingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKTabJumpingView.swift; sourceTree = "<group>"; };
 		500A9D8B236243460069443E /* CubicCurveAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicCurveAlgorithm.swift; sourceTree = "<group>"; };
 		5017671B235E32E800ED55AE /* TabItemShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemShape.swift; sourceTree = "<group>"; };
 		5073B083235B5AE70065A832 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		5073B086235B5B890065A832 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		5073B088235B6BE00065A832 /* TabItemSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemSelectionView.swift; sourceTree = "<group>"; };
+		50FC138023662C8700B87F8F /* MKTabJumpingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKTabJumpingView.swift; sourceTree = "<group>"; };
+		50FC138523662D9500B87F8F /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,13 +111,12 @@
 		01152B5E234131CF00133BED /* MKTabBarItemJumping */ = {
 			isa = PBXGroup;
 			children = (
+				50FC138223662C9B00B87F8F /* Domain */,
 				5017671A235E32CE00ED55AE /* Shapes */,
 				5073B085235B5B760065A832 /* Views */,
 				5073B082235B5AD70065A832 /* Extensions */,
 				01152B6D234131D400133BED /* Info.plist */,
 				01152B5F234131CF00133BED /* AppDelegate.swift */,
-				01152B8F2341382300133BED /* MKTabJumpingView.swift */,
-				500A9D8B236243460069443E /* CubicCurveAlgorithm.swift */,
 				01152B61234131CF00133BED /* SceneDelegate.swift */,
 				01152B65234131D400133BED /* Assets.xcassets */,
 				01152B6A234131D400133BED /* LaunchScreen.storyboard */,
@@ -169,10 +170,20 @@
 		5073B085235B5B760065A832 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				50FC138023662C8700B87F8F /* MKTabJumpingView.swift */,
 				5073B086235B5B890065A832 /* TabItemView.swift */,
 				5073B088235B6BE00065A832 /* TabItemSelectionView.swift */,
+				50FC138523662D9500B87F8F /* LogoView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		50FC138223662C9B00B87F8F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				500A9D8B236243460069443E /* CubicCurveAlgorithm.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,11 +318,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				01152B60234131CF00133BED /* AppDelegate.swift in Sources */,
+				50FC138623662D9500B87F8F /* LogoView.swift in Sources */,
 				5073B084235B5AE70065A832 /* Color.swift in Sources */,
 				5073B089235B6BE00065A832 /* TabItemSelectionView.swift in Sources */,
-				01152B902341382300133BED /* MKTabJumpingView.swift in Sources */,
 				5073B087235B5B890065A832 /* TabItemView.swift in Sources */,
 				01152B62234131CF00133BED /* SceneDelegate.swift in Sources */,
+				50FC138123662C8700B87F8F /* MKTabJumpingView.swift in Sources */,
 				500A9D8C236243460069443E /* CubicCurveAlgorithm.swift in Sources */,
 				5017671C235E32E800ED55AE /* TabItemShape.swift in Sources */,
 			);
