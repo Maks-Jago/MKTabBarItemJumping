@@ -27,7 +27,7 @@ struct TabItemSelectionView: View {
             .modifier(JumpingEffect(itemWidth: itemWidth,
                                     selectedItemIndex: selectedItemIndex,
                                     jumping: jumping))
-            .animation(.linear)
+            .animation(Animation.linear.speed(1))
     }
 }
 

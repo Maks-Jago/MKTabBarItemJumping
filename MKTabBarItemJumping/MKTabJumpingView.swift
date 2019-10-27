@@ -16,21 +16,38 @@ struct MKTabJumpingView: View {
                                     .init(iconName: "person")]
 
     @State var selectedItemIndex: Int = 0
+    @State var firstSelectedItemIndex: Int = 0
+    @State var secondSelectedItemIndex: Int = 0
+
     @State var jumping: Bool = false
+    @State var secondSelected: Bool = true
+
+    var springAnimation: Animation {
+        Animation
+            .spring(dampingFraction: 0.6)
+            .delay(0.15)
+    }
 
     var body: some View {
         GeometryReader { proxy in
-            VStack {
+            VStack(spacing: 0) {
                 Color.gray.edgesIgnoringSafeArea(.all)
                 ZStack(alignment: .leading) {
                     Color.gray
                         .clipShape(TabItemShape(itemWidth: proxy.size.width / CGFloat(self.items.count),
-                                                selectedItemIndex: self.selectedItemIndex,
+                                                selectedItemIndex: self.firstSelectedItemIndex,
                                                 isSelected: self.jumping))
                         .edgesIgnoringSafeArea(.all)
-                        .padding(.top, -10)
                     .frame(height: 100)
-                    .animation(.spring())
+                        .animation(self.springAnimation)
+
+                    Color.gray
+                        .clipShape(TabItemShape(itemWidth: proxy.size.width / CGFloat(self.items.count),
+                                                selectedItemIndex: self.secondSelectedItemIndex,
+                                                isSelected: self.secondSelected))
+                        .edgesIgnoringSafeArea(.all)
+                        .frame(height: 100)
+                        .animation(self.springAnimation)
 
                     TabItemSelectionView(itemWidth: proxy.size.width / CGFloat(self.items.count),
                                          selectedItemIndex: self.selectedItemIndex,
@@ -51,7 +68,15 @@ struct MKTabJumpingView: View {
 
     func onItemSelected(item: TabItem) {
         selectedItemIndex = items.firstIndex(of: item) ?? 0
+
+        if jumping {
+            secondSelectedItemIndex = selectedItemIndex
+        } else {
+            firstSelectedItemIndex = selectedItemIndex
+        }
+
         jumping.toggle()
+        secondSelected.toggle()
     }
 }
 
