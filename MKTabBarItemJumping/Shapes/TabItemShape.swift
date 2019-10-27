@@ -30,18 +30,18 @@ struct TabItemShape: Shape {
 
     func path(in rect: CGRect) -> Path {
         let y = abs(rect.height * 0.5 * value)
-        let offsetXDelta: CGFloat = 40
+        let offsetXDelta: CGFloat = 20
 
-        let offsetX = (itemWidth / 2 - 37 + CGFloat(selectedItemIndex) * itemWidth)
+        let offsetX = (itemWidth / 2 - 38 + CGFloat(selectedItemIndex) * itemWidth)
         let offsetY = abs(30 * sin(value * .pi / 2))
 
         let points = [
-            CGPoint(x: offsetX - offsetXDelta - 50, y: 0),
-            CGPoint(x: offsetX - 15, y: offsetY),
-            CGPoint(x: offsetX + 10, y: y),
-            CGPoint(x: offsetX + itemWidth - 10, y: y),
-            CGPoint(x: offsetX + itemWidth + 15, y: offsetY),
-            CGPoint(x: offsetX + itemWidth + offsetXDelta + 50, y: 0)
+            CGPoint(x: offsetX - offsetXDelta, y: 0),
+            CGPoint(x: offsetX - 5, y: offsetY),
+            CGPoint(x: offsetX + 17, y: y),
+            CGPoint(x: offsetX + itemWidth - 17, y: y),
+            CGPoint(x: offsetX + itemWidth + 5, y: offsetY),
+            CGPoint(x: offsetX + itemWidth + offsetXDelta, y: 0)
         ]
 
         let controlPoints = CubicCurveAlgorithm().controlPointsFromPoints(dataPoints: points)

@@ -60,7 +60,7 @@ struct MKTabJumpingView: View {
                                         onItemSelected: self.onItemSelected)
                         }
                     }
-                    .frame(height: 90)
+                    .frame(height: 100)
                 }
             }
             .background(Color.white)
