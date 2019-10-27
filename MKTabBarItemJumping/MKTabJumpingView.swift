@@ -31,17 +31,17 @@ struct MKTabJumpingView: View {
     var body: some View {
         GeometryReader { proxy in
             VStack(spacing: 0) {
-                Color.gray.edgesIgnoringSafeArea(.all)
+                Color.purple.edgesIgnoringSafeArea(.all)
                 ZStack(alignment: .leading) {
-                    Color.gray
+                    Color.purple
                         .clipShape(TabItemShape(itemWidth: proxy.size.width / CGFloat(self.items.count),
                                                 selectedItemIndex: self.firstSelectedItemIndex,
                                                 isSelected: self.jumping))
                         .edgesIgnoringSafeArea(.all)
-                    .frame(height: 100)
+                        .frame(height: 100)
                         .animation(self.springAnimation)
 
-                    Color.gray
+                    Color.purple
                         .clipShape(TabItemShape(itemWidth: proxy.size.width / CGFloat(self.items.count),
                                                 selectedItemIndex: self.secondSelectedItemIndex,
                                                 isSelected: self.secondSelected))
@@ -63,6 +63,7 @@ struct MKTabJumpingView: View {
                     .frame(height: 90)
                 }
             }
+            .background(Color.white)
         }
     }
 
