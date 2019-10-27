@@ -31,7 +31,14 @@ struct MKTabJumpingView: View {
     var body: some View {
         GeometryReader { proxy in
             VStack(spacing: 0) {
-                Color.purple.edgesIgnoringSafeArea(.all)
+                ZStack(alignment: .center) {
+                    Color.purple.edgesIgnoringSafeArea(.all)
+                    Image("molfar_logo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 50)
+                        .offset(y: -50)
+                }
                 ZStack(alignment: .leading) {
                     Color.purple
                         .clipShape(TabItemShape(itemWidth: proxy.size.width / CGFloat(self.items.count),
