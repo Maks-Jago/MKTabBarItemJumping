@@ -1,4 +1,4 @@
-# MKTabBarItemJumping
+# MKTabbarItemJumping
 [![Author](https://img.shields.io/badge/author-Max_Kuznetsov-orange.svg)](https://www.molfar.io)
 ![Xcode 11.1](https://img.shields.io/badge/Xcode-11.1-blue.svg)
 ![Swift 5.1](https://img.shields.io/badge/Swift-5.1-blue.svg)
