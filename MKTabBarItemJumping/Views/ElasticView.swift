@@ -25,7 +25,6 @@ struct ElasticView: View {
                                     selectedItemIndex: selectedItemIndex,
                                     isSelected: isSelected))
             .edgesIgnoringSafeArea(.all)
-            .frame(height: 100)
             .animation(isSelected ? springAnimation : .interactiveSpring())
     }
 }

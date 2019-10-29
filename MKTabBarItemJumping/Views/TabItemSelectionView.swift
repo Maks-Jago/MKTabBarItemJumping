@@ -23,7 +23,7 @@ struct TabItemSelectionView: View {
             )
             .clipShape(Circle())
             .shadow(radius: 1)
-            .offset(y: -20)
+            .offset(y: -10)
             .modifier(JumpingEffect(itemWidth: itemWidth,
                                     selectedItemIndex: selectedItemIndex,
                                     jumping: jumping))

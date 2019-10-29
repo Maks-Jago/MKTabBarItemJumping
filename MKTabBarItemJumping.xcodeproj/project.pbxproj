@@ -172,11 +172,11 @@
 		5073B085235B5B760065A832 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				50FC138023662C8700B87F8F /* MKTabJumpingView.swift */,
-				5073B086235B5B890065A832 /* TabItemView.swift */,
-				5073B088235B6BE00065A832 /* TabItemSelectionView.swift */,
-				50FC138523662D9500B87F8F /* LogoView.swift */,
 				50FC138723662FF900B87F8F /* ElasticView.swift */,
+				50FC138523662D9500B87F8F /* LogoView.swift */,
+				50FC138023662C8700B87F8F /* MKTabJumpingView.swift */,
+				5073B088235B6BE00065A832 /* TabItemSelectionView.swift */,
+				5073B086235B5B890065A832 /* TabItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

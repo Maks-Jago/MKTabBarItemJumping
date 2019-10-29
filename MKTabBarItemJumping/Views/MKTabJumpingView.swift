@@ -30,36 +30,37 @@ struct MKTabJumpingView: View {
 
     var body: some View {
         GeometryReader { proxy in
-            VStack(spacing: 0) {
-                ZStack(alignment: .center) {
-                    Color.purple.edgesIgnoringSafeArea(.all)
-                    LogoView()
-                        .offset(y: -50)
-                }
-                ZStack(alignment: .leading) {
-                    ElasticView(itemWidth: proxy.size.width / CGFloat(self.items.count),
-                                selectedItemIndex: self.firstSelectedItemIndex,
-                                isSelected: self.firstSelected)
-
-                    ElasticView(itemWidth: proxy.size.width / CGFloat(self.items.count),
-                                selectedItemIndex: self.secondSelectedItemIndex,
-                                isSelected: self.secondSelected)
-
-                    TabItemSelectionView(itemWidth: proxy.size.width / CGFloat(self.items.count),
-                                         selectedItemIndex: self.selectedItemIndex,
-                                         jumping: self.firstSelected)
-
-                    HStack(spacing: 0) {
-                        ForEach(0..<self.items.count) { index in
-                            TabItemView(item: self.items[index],
-                                        isSelected: index == self.selectedItemIndex,
-                                        onItemSelected: self.onItemSelected)
-                        }
+            ZStack {
+                Color.white.edgesIgnoringSafeArea(.all)
+                VStack(spacing: 0) {
+                    ZStack(alignment: .center) {
+                        Color.purple.edgesIgnoringSafeArea(.all)
+                        LogoView()
+                            .offset(y: -50)
                     }
-                    .frame(height: 100)
+                    ZStack(alignment: .leading) {
+                        ElasticView(itemWidth: proxy.size.width / CGFloat(self.items.count),
+                                    selectedItemIndex: self.firstSelectedItemIndex,
+                                    isSelected: self.firstSelected)
+
+                        ElasticView(itemWidth: proxy.size.width / CGFloat(self.items.count),
+                                    selectedItemIndex: self.secondSelectedItemIndex,
+                                    isSelected: self.secondSelected)
+
+                        TabItemSelectionView(itemWidth: proxy.size.width / CGFloat(self.items.count),
+                                             selectedItemIndex: self.selectedItemIndex,
+                                             jumping: self.firstSelected)
+
+                        HStack(spacing: 0) {
+                            ForEach(0..<self.items.count) { index in
+                                TabItemView(item: self.items[index],
+                                            isSelected: index == self.selectedItemIndex,
+                                            onItemSelected: self.onItemSelected)
+                            }
+                        }.offset(y: 5)
+                    }.frame(height: 90)
                 }
             }
-            .background(Color.white)
         }
     }
 

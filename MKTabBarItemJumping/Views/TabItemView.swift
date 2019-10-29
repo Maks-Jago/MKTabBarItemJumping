@@ -43,7 +43,7 @@ struct TabItemView: View {
                 .foregroundColor(Color.black)
                 .opacity(self.isSelected ? 0 : 1)
         }
-        .offset(y: self.isSelected ? -20 : 0)
+        .offset(y: self.isSelected ? -15 : 0)
         .animation(Animation.easeOut)
         .onTapGesture {
             self.onItemSelected(self.item)
