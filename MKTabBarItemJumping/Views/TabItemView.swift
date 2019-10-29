@@ -53,9 +53,16 @@ struct TabItemView: View {
 
 struct TabItemView_Previews: PreviewProvider {
     static var previews: some View {
-        TabItemView(item: TabItem(iconName: "heart"), isSelected: false) { (selectedIndex) in
+        Group {
+            TabItemView(item: TabItem(iconName: "pin.circle"), isSelected: false) { (selectedIndex) in
 
+            }
+            .background(Color.gray)
+
+            TabItemView(item: TabItem(iconName: "heart"), isSelected: true) { (selectedIndex) in
+
+            }
+            .background(Color.black)
         }
-        .background(Color.gray)
     }
 }

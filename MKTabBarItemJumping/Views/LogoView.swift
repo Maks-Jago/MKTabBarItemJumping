@@ -19,6 +19,10 @@ struct LogoView: View {
 
 struct LogoView_Previews: PreviewProvider {
     static var previews: some View {
-        LogoView()
+        ZStack {
+            Color.black
+            LogoView()
+        }
+        .edgesIgnoringSafeArea(.all)
     }
 }
